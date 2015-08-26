@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8173.3" systemVersion="15A263e" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8142"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -18,6 +20,9 @@
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="0DB-XL-Ntu">
                                 <rect key="frame" x="180" y="43" width="240" height="193"/>
+                                <animations/>
+                                <color key="backgroundColor" name="keyboardFocusIndicatorColor" catalog="System" colorSpace="catalog"/>
+                                <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="193" id="R8i-Qb-L6a"/>
                                     <constraint firstAttribute="width" constant="240" id="nzR-ug-Kpb"/>
@@ -25,6 +30,7 @@
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BAH-El-OnA">
                                 <rect key="frame" x="16" y="550" width="96" height="30"/>
+                                <animations/>
                                 <state key="normal" title="清除SD和缓存">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -34,6 +40,7 @@
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rsB-1l-0pc">
                                 <rect key="frame" x="180" y="284" width="240" height="163"/>
+                                <animations/>
                                 <color key="backgroundColor" red="0.68235294120000001" green="0.85098039219999999" blue="0.79607843140000001" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="240" id="QC7-il-afO"/>
@@ -43,9 +50,24 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DnX-Bp-Y74">
+                                <rect key="frame" x="520" y="550" width="60" height="30"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="Yab-Dn-apT"/>
+                                    <constraint firstAttribute="width" constant="60" id="cs6-K5-hbo"/>
+                                </constraints>
+                                <state key="normal" title="请求图片"/>
+                                <connections>
+                                    <action selector="loadImage:" destination="BYZ-38-t0r" eventType="touchUpInside" id="sB7-hP-cCz"/>
+                                </connections>
+                            </button>
                         </subviews>
+                        <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="DnX-Bp-Y74" secondAttribute="bottom" constant="20" id="0a1-Sc-Clk"/>
+                            <constraint firstItem="DnX-Bp-Y74" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="2BN-0k-zYM"/>
                             <constraint firstAttribute="centerX" secondItem="0DB-XL-Ntu" secondAttribute="centerX" id="JXB-nz-NTX"/>
                             <constraint firstAttribute="centerX" secondItem="rsB-1l-0pc" secondAttribute="centerX" id="TSd-wS-96e"/>
                             <constraint firstItem="rsB-1l-0pc" firstAttribute="top" secondItem="0DB-XL-Ntu" secondAttribute="bottom" constant="48" id="mob-Eo-2cW"/>
@@ -59,6 +81,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="448" y="369"/>
         </scene>
     </scenes>
 </document>
