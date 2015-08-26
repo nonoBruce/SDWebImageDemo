@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="0DB-XL-Ntu">
+                                <rect key="frame" x="180" y="43" width="240" height="193"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="193" id="R8i-Qb-L6a"/>
+                                    <constraint firstAttribute="width" constant="240" id="nzR-ug-Kpb"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BAH-El-OnA">
+                                <rect key="frame" x="16" y="550" width="96" height="30"/>
+                                <state key="normal" title="清除SD和缓存">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="clear:" destination="BYZ-38-t0r" eventType="touchUpInside" id="aUB-k2-CHS"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rsB-1l-0pc">
+                                <rect key="frame" x="180" y="284" width="240" height="163"/>
+                                <color key="backgroundColor" red="0.68235294120000001" green="0.85098039219999999" blue="0.79607843140000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="240" id="QC7-il-afO"/>
+                                    <constraint firstAttribute="height" constant="163" id="gYT-fI-kHS"/>
+                                </constraints>
+                                <state key="normal">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="centerX" secondItem="0DB-XL-Ntu" secondAttribute="centerX" id="JXB-nz-NTX"/>
+                            <constraint firstAttribute="centerX" secondItem="rsB-1l-0pc" secondAttribute="centerX" id="TSd-wS-96e"/>
+                            <constraint firstItem="rsB-1l-0pc" firstAttribute="top" secondItem="0DB-XL-Ntu" secondAttribute="bottom" constant="48" id="mob-Eo-2cW"/>
+                            <constraint firstItem="0DB-XL-Ntu" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="23" id="q3H-ao-MsX"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="button" destination="rsB-1l-0pc" id="4EB-Kv-I59"/>
+                        <outlet property="imageView" destination="0DB-XL-Ntu" id="Skr-mn-Mnq"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+</document>
