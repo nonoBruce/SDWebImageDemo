@@ -81,6 +81,4 @@ NSLog(@"下载完成");
 >在Info.plist中添加NSAppTransportSecurity类型Dictionary。
 在NSAppTransportSecurity下添加NSAllowsArbitraryLoads类型Boolean,值设为YES
 
-如下图：
-![Alt text](./屏幕快照 2015-08-26 下午9.41.02.png)
 
